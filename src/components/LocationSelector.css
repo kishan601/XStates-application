@@ -1,0 +1,102 @@
+.location-selector {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .dropdowns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .select-container {
+    position: relative;
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+  }
+  
+  select:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    color: #aaa;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  option {
+    padding: 10px;
+  }
+  
+  .loading-indicator {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .selected-location {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e8f4fc;
+    border-radius: 5px;
+    border-left: 4px solid #4a90e2;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .error-message {
+    background-color: #fff0f0;
+    color: #e53935;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  @media (max-width: 480px) {
+    .location-selector {
+      padding: 15px;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    select {
+      padding: 10px;
+      font-size: 14px;
+    }
+    
+    .selected-location {
+      font-size: 16px;
+    }
+  }
